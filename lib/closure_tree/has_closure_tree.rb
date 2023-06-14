@@ -2,6 +2,7 @@ module ClosureTree
   module HasClosureTree
     def has_closure_tree(options = {})
       options.assert_valid_keys(
+        :counter_cache,
         :parent_column_name,
         :dependent,
         :hierarchy_class_name,

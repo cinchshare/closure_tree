@@ -8,6 +8,7 @@ module ClosureTree
 
       belongs_to :parent, nil,
         class_name: _ct.model_class.to_s,
+        counter_cache: _ct.options[:counter_cache],
         foreign_key: _ct.parent_column_name,
         inverse_of: :children,
         touch: _ct.options[:touch],
